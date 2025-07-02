@@ -22,14 +22,36 @@ const quotes = [
 ];
 
 const quoteText = document.getElementById('quote');
-const quoteCategory = document.getElementById('author'); // reusing the author element to show category
+const quoteCategory = document.getElementById('author'); // showing category here
 const generateBtn = document.getElementById('generate-btn');
 
-generateBtn.addEventListener('click', () => {
+//  Function to display a random quote
+function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
 
   quoteText.textContent = `"${randomQuote.text}"`;
   quoteCategory.textContent = `Category: ${randomQuote.category}`;
+}
+
+//  Function to add a new quote
+function addQuote(text, category) {
+  if (text.trim() !== "" && category.trim() !== "") {
+    quotes.push({ text, category });
+    displayRandomQuote(); // Optionally display the new one immediately
+  }
+}
+
+//  Event listener for "Show New Quote" button
+generateBtn.addEventListener('click', displayRandomQuote);
+
+document.getElementById('add-quote-btn').addEventListener('click', () => {
+  const text = document.getElementById('new-quote-text').value;
+  const category = document.getElementById('new-quote-category').value;
+  addQuote(text, category);
 });
+
+
+
+
 
