@@ -1,34 +1,35 @@
 const quotes = [
   {
-    quote: "The best way to get started is to quit talking and begin doing.",
-    author: "Walt Disney"
+    text: "The best way to get started is to quit talking and begin doing.",
+    category: "Motivation"
   },
   {
-    quote: "Success is not in what you have, but who you are.",
-    author: "Bo Bennett"
+    text: "Success is not in what you have, but who you are.",
+    category: "Success"
   },
   {
-    quote: "Do not wait for the perfect moment, take the moment and make it perfect.",
-    author: "Unknown"
+    text: "Do not wait for the perfect moment, take the moment and make it perfect.",
+    category: "Inspiration"
   },
   {
-    quote: "It always seems impossible until it is done.",
-    author: "Nelson Mandela"
+    text: "It always seems impossible until it is done.",
+    category: "Determination"
   },
   {
-    quote: "Believe you can and you're halfway there.",
-    author: "Theodore Roosevelt"
+    text: "Believe you can and you're halfway there.",
+    category: "Belief"
   }
 ];
 
 const quoteText = document.getElementById('quote');
-const quoteAuthor = document.getElementById('author');
+const quoteCategory = document.getElementById('author'); // reusing the author element to show category
 const generateBtn = document.getElementById('generate-btn');
 
 generateBtn.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
 
-  quoteText.textContent = `"${randomQuote.quote}"`;
-  quoteAuthor.textContent = `- ${randomQuote.author}`;
+  quoteText.textContent = `"${randomQuote.text}"`;
+  quoteCategory.textContent = `Category: ${randomQuote.category}`;
 });
+
