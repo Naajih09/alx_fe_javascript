@@ -14,8 +14,18 @@
   <p id="author"></p>
 
   <button id="generate-btn">Show New Quote</button>
-  <button id="export-btn">Export to JSON</button>
-  <input type="file" id="importFile" accept=".json" />
+
+  <!--  Label for Export Button -->
+  <div>
+    <label for="export-btn"><strong>Export Quotes:</strong></label><br />
+    <button id="export-btn">Export to JSON</button>
+  </div>
+
+  <!--  Label for Import Input -->
+  <div style="margin-top: 1rem;">
+    <label for="importFile"><strong>Import Quotes:</strong></label><br />
+    <input type="file" id="importFile" accept=".json" />
+  </div>
 
   <div id="form-container"></div>
 
