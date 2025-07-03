@@ -6,23 +6,32 @@ const quotes = [
   {
     text: "Success is not in what you have, but who you are.",
     category: "Success"
+  },
+  {
+    text: "Do not wait for the perfect moment, take the moment and make it perfect.",
+    category: "Inspiration"
+  },
+  {
+    text: "It always seems impossible until it is done.",
+    category: "Determination"
   }
 ];
 
 const quoteText = document.getElementById('quote');
 const quoteCategory = document.getElementById('author');
-const generateBtn = document.getElementById('generate-btn');
+const newQuote = document.getElementById('generate-btn'); //  REQUIRED VARIABLE NAME
 const formContainer = document.getElementById('form-container');
 
 //  Function to display a random quote
 function showRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
+
   quoteText.innerHTML = `"${randomQuote.text}"`;
   quoteCategory.innerHTML = `Category: <strong>${randomQuote.category}</strong>`;
 }
 
-//  Function to create a form to add new quotes
+//  Function to create a form that adds new quotes
 function createAddQuoteForm() {
   const form = document.createElement('form');
 
@@ -60,8 +69,8 @@ function createAddQuoteForm() {
   formContainer.appendChild(form);
 }
 
-//  Show a quote on button click
-generateBtn.addEventListener('click', showRandomQuote);
+//  Event listener for the “Show New Quote” button using `newQuote`
+newQuote.addEventListener('click', showRandomQuote);
 
-//  Create the form on page load
+//  Create the form when the page loads
 createAddQuoteForm();
