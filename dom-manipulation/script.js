@@ -63,11 +63,20 @@ function addQuote(text, category) {
 }
 
 // Server Sync
-async function syncWithServer() {
+async function fetchQuotesFromServer() {
   try {
     const response = await fetch(SERVER_URL);
-    const serverQuotes = await response.json();
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching from server:', error);
+    return [];
+  }
+}
 
+async function syncWithServer() {
+  try {
+    const serverQuotes = await fetchQuotesFromServer();
     const isDifferent = JSON.stringify(serverQuotes) !== JSON.stringify(quotes);
     if (isDifferent) {
       quotes = serverQuotes;
