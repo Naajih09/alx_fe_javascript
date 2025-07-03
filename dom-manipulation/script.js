@@ -3,13 +3,16 @@ let quotes = JSON.parse(localStorage.getItem('quotes')) || [
   { text: "Success is not in what you have, but who you are.", category: "Success" }
 ];
 
-const quoteText = document.getElementById('quote');
-const quoteCategory = document.getElementById('author');
+
 const newQuote = document.getElementById('generate-btn');
 const exportBtn = document.getElementById('export-btn');
 const importInput = document.getElementById('importFile');
 const categoryFilter = document.getElementById('categoryFilter');
 const formContainer = document.getElementById('form-container');
+const quoteDisplay = document.getElementById('quoteDisplay'); 
+const quoteText = document.getElementById('quote');
+const quoteCategory = document.getElementById('author');
+
 
 function saveQuotes() {
   localStorage.setItem('quotes', JSON.stringify(quotes));
@@ -146,3 +149,5 @@ window.onload = function () {
 newQuote.addEventListener('click', () => showRandomQuote(true));
 exportBtn.addEventListener('click', exportToJsonFile);
 importInput.addEventListener('change', importFromJsonFile);
+
+
