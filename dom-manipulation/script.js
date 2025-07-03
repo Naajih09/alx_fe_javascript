@@ -90,6 +90,10 @@ async function syncWithServer() {
   }
 }
 
+async function syncQuotes() {
+  await syncWithServer();
+}
+
 async function sendQuoteToServer(quoteObj) {
   try {
     await fetch(SERVER_URL, {
