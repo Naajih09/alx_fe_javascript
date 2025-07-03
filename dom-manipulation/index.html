@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic Quote Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Quote Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Quote of the Day</h1>
-    <div id="quote-box">
-      <p id="quote">Click the button to get a quote!</p>
-      <p id="author"></p>
-    </div>
-    <input type="text" id="new-quote-text" placeholder="Quote text">
-<input type="text" id="new-quote-category" placeholder="Category">
-<button id="add-quote-btn">Add Quote</button>
-  </div>
+
+  <h1>Random Quote Generator</h1>
+
+  <p id="quote">Click the button to get a quote.</p>
+  <p id="author"></p>
+  <button id="generate-btn">Show New Quote</button>
+
+  <div id="form-container"></div>
 
   <script src="script.js"></script>
 </body>
