@@ -25,21 +25,15 @@ const quoteText = document.getElementById('quote');
 const quoteCategory = document.getElementById('author');
 const generateBtn = document.getElementById('generate-btn');
 
-//  Function to display a random quote
-function displayRandomQuote() {
+//  Function name is showRandomQuote
+function showRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const randomQuote = quotes[randomIndex];
-  quoteText.textContent = `"${randomQuote.text}"`;
-  quoteCategory.textContent = `Category: ${randomQuote.category}`;
-}
 
-//  Function to add a new quote
-function addQuote(text, category) {
-  if (text.trim() && category.trim()) {
-    quotes.push({ text, category });
-    displayRandomQuote();
-  }
+  //  Uses innerHTML to update the DOM
+  quoteText.innerHTML = `"${randomQuote.text}"`;
+  quoteCategory.innerHTML = `Category: <strong>${randomQuote.category}</strong>`;
 }
 
 //  Event listener for “Show New Quote” button
-generateBtn.addEventListener('click', displayRandomQuote);
+generateBtn.addEventListener('click', showRandomQuote);
