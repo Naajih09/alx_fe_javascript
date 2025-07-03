@@ -3,25 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quote Generator + Storage</title>
+  <title>Quote Generator + Filter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <h1>Dynamic Quote Generator</h1>
 
+  <!--  Category Filter -->
+  <label for="categoryFilter"><strong>Filter by Category:</strong></label><br />
+  <select id="categoryFilter" onchange="filterQuotes()">
+    <option value="all">All Categories</option>
+  </select>
+
   <p id="quote">Click the button to get a quote.</p>
   <p id="author"></p>
 
   <button id="generate-btn">Show New Quote</button>
 
-  <!--  Label for Export Button -->
-  <div>
+  <div style="margin-top: 1rem;">
     <label for="export-btn"><strong>Export Quotes:</strong></label><br />
     <button id="export-btn">Export to JSON</button>
   </div>
 
-  <!--  Label for Import Input -->
   <div style="margin-top: 1rem;">
     <label for="importFile"><strong>Import Quotes:</strong></label><br />
     <input type="file" id="importFile" accept=".json" />
