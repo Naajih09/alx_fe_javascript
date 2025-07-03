@@ -1,5 +1,5 @@
 // Constants and DOM Elements
-const SERVER_URL = 'https://mockapi.io/quotes'; // Replace with your mock API
+const SERVER_URL = 'https://jsonplaceholder.typicode.com/posts';
 const quoteDisplay = document.getElementById('quoteDisplay');
 const quoteText = document.getElementById('quote');
 const quoteCategory = document.getElementById('author');
