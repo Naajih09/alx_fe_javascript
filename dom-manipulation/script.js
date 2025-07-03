@@ -82,6 +82,7 @@ async function syncWithServer() {
       quotes = serverQuotes;
       saveQuotes();
       notify('Quotes updated from server.');
+      alert('Quotes synced with server!');
       populateCategories();
       filterQuotes();
     }
