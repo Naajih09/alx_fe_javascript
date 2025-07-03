@@ -3,39 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quote Generator + Filter</title>
+  <title>Dynamic Quote Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <h1>Dynamic Quote Generator</h1>
 
-  <h1>Dynamic Quote Generator</h1>
+    <!-- Notification -->
+    <p id="notification" class="notification" style="display: none;"></p>
 
-  <!--  Category Filter -->
-  <label for="categoryFilter"><strong>Filter by Category:</strong></label><br />
-  <select id="categoryFilter" onchange="filterQuotes()">
-    <option value="all">All Categories</option>
-  </select>
+    <!-- Quote Display -->
+    <div id="quoteDisplay" class="quote-box">
+      <p id="quote">Loading quote...</p>
+      <p id="author">Category: ...</p>
+    </div>
 
-  <!--  Add wrapper div for quoteDisplay -->
-<div id="quoteDisplay">
-  <p id="quote">Click the button to get a quote.</p>
-  <p id="author"></p>
-</div>
+    <!-- Category Filter -->
+    <label for="categoryFilter">Filter by Category:</label>
+    <select id="categoryFilter" onchange="filterQuotes()"></select>
 
-  <button id="generate-btn">Show New Quote</button>
+    <!-- Show New Quote -->
+    <button id="generate-btn">Show New Quote</button>
 
-  <div style="margin-top: 1rem;">
-    <label for="export-btn"><strong>Export Quotes:</strong></label><br />
-    <button id="export-btn">Export to JSON</button>
+    <!-- Add Quote Form -->
+    <form id="addQuoteForm">
+      <h2>Add a New Quote</h2>
+      <input type="text" id="newQuote" placeholder="Enter quote" required />
+      <input type="text" id="newCategory" placeholder="Enter category" required />
+      <button type="submit">Add Quote</button>
+    </form>
+
+    <!-- JSON Import/Export -->
+    <div class="import-export">
+      <button id="exportBtn">Export Quotes</button>
+      <input type="file" id="importFile" accept=".json" />
+    </div>
   </div>
-
-  <div style="margin-top: 1rem;">
-    <label for="importFile"><strong>Import Quotes:</strong></label><br />
-    <input type="file" id="importFile" accept=".json" />
-  </div>
-
-  <div id="form-container"></div>
-
 
   <script src="script.js"></script>
 </body>

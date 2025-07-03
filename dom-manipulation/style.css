@@ -1,85 +1,72 @@
-/* General Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f9;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
   padding: 2rem;
-  text-align: center;
 }
 
-/* Headline */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-  color: #4a4a7d;
+  text-align: center;
+  color: #333;
 }
 
-/* Quote Display */
-#quote {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin: 1.5rem 0 0.5rem;
+.quote-box {
+  background-color: #e7f3ff;
+  border-left: 5px solid #2196F3;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.quote-box p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+input[type="text"] {
+  width: 100%;
   padding: 0.5rem;
-}
-
-#author {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-/* Buttons */
-button {
-  background-color: #4a90e2;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  margin: 0.5rem;
-  border: none;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+select, button {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #2196F3;
+  background-color: #2196F3;
+  color: white;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 button:hover {
-  background-color: #357ab8;
+  background-color: #1976D2;
 }
 
-/* File input */
-input[type="file"] {
-  margin-top: 0.5rem;
+.import-export {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-/* Dropdown */
-select {
+.notification {
   padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  margin: 0.5rem 0 1rem;
-}
-
-/* Form */
-form {
-  margin-top: 2rem;
-}
-
-form input[type="text"] {
-  padding: 0.5rem;
-  width: 45%;
-  margin: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  form input[type="text"] {
-    width: 80%;
-    margin-bottom: 0.5rem;
-  }
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  margin-bottom: 1rem;
 }
