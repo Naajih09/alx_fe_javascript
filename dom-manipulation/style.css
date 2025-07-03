@@ -5,11 +5,6 @@ body {
   background-color: #f9f9f9;
 }
 
-h1 {
-  color: #333;
-  margin-bottom: 1rem;
-}
-
 #quote {
   font-size: 1.5rem;
   margin-bottom: 1rem;
@@ -29,6 +24,7 @@ button {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  margin: 0.5rem;
 }
 
 button:hover {
@@ -39,7 +35,7 @@ form {
   margin-top: 2rem;
 }
 
-input {
+input[type="text"] {
   padding: 0.5rem;
   margin: 0.5rem;
   width: 200px;

@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Random Quote Generator</title>
+  <title>Quote Generator + Storage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Random Quote Generator</h1>
+  <h1>Dynamic Quote Generator</h1>
 
   <p id="quote">Click the button to get a quote.</p>
   <p id="author"></p>
+
   <button id="generate-btn">Show New Quote</button>
+  <button id="export-btn">Export to JSON</button>
+  <input type="file" id="importFile" accept=".json" />
 
   <div id="form-container"></div>
 
